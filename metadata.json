@@ -1,0 +1,6 @@
+{
+  "name": "RegearFX",
+  "description": "Public website for RegearFX - a professional Forex and Crypto brokerage brand offering transparent trading tools, market insights, and multi-asset access.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
