@@ -22,7 +22,9 @@ export const FAQView: React.FC = () => {
         />
 
         {/* Full 50+ FAQ Accordion with Category Tabs & Search */}
-        <FAQAccordion />
+        <React.Suspense fallback={<div className="py-8 text-center text-xs text-[#77736C]">Loading FAQs...</div>}>
+          <FAQAccordion />
+        </React.Suspense>
 
         {/* Pre-Footer Action Banner */}
         <div className="p-8 sm:p-12 rounded-2xl bg-[#F3F2EE] border border-[#E7E4DE] text-center">
