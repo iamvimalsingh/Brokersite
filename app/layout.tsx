@@ -1,10 +1,17 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { MarketTicker } from '@/components/layout/MarketTicker';
 import { RiskWarning } from '@/components/layout/RiskWarning';
 import { Footer } from '@/components/layout/Footer';
 import { BRAND_NAME, BROKER_CONFIG } from '@/lib/config';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#FBFBF9',
+};
 
 export const metadata: Metadata = {
   title: {
