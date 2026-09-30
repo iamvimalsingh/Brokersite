@@ -70,7 +70,7 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({ section, isOpen, onClose }) 
   return (
     <div
       ref={menuRef}
-      className="absolute top-full left-1/2 -translate-x-1/2 w-screen max-w-4xl bg-[#FBFBF9] border border-[#E7E4DE] shadow-xl rounded-b-lg p-6 mt-1 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
+      className="absolute top-full left-1/2 -translate-x-1/2 w-[calc(100vw-2rem)] max-w-4xl bg-[#FBFBF9] border border-[#E7E4DE] shadow-xl rounded-b-lg p-6 mt-1 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
       onMouseLeave={onClose}
     >
       <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#E7E4DE]">

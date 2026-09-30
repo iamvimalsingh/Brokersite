@@ -27,25 +27,25 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <header className="sticky top-0 z-40 w-full bg-[#FBFBF9]/95 backdrop-blur-md border-b border-[#E7E4DE] transition-all">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4">
+        <div className="max-w-[1440px] mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between gap-2 sm:gap-4">
           {/* Brand Wordmark Zone */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <Link
               href="/"
-              className="flex items-center gap-2.5 text-[#111111] group focus-visible:outline-none"
+              className="flex items-center gap-2 sm:gap-2.5 text-[#111111] group focus-visible:outline-none"
               aria-label={`${BRAND_NAME} Home`}
             >
-              <div className="w-8 h-8 rounded-sm bg-[#111111] text-[#FBFBF9] flex items-center justify-center font-serif text-lg font-medium shadow-xs group-hover:bg-[#087F78] transition-colors">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-sm bg-[#111111] text-[#FBFBF9] flex items-center justify-center font-serif text-base sm:text-lg font-medium shadow-xs group-hover:bg-[#087F78] transition-colors">
                 R
               </div>
               <div className="flex flex-col">
                 <span
-                  className="text-xl sm:text-2xl font-normal tracking-tight leading-none text-[#111111]"
+                  className="text-lg sm:text-2xl font-normal tracking-tight leading-none text-[#111111]"
                   style={{ fontFamily: 'var(--font-serif)' }}
                 >
                   {BRAND_NAME}
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.18em] font-semibold text-[#77736C]">
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] font-semibold text-[#77736C]">
                   Markets
                 </span>
               </div>
@@ -56,11 +56,11 @@ export const Navbar: React.FC = () => {
           <DesktopNavigation />
 
           {/* Right Action Controls Zone */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
             {/* Search Trigger */}
             <button
               onClick={() => setIsSearchOpen(true)}
-              className="p-2 sm:px-2.5 sm:py-1.5 text-xs text-[#77736C] hover:text-[#111111] hover:bg-[#F3F2EE] rounded-md transition-colors flex items-center gap-2 border border-transparent hover:border-[#E7E4DE] cursor-pointer"
+              className="p-1.5 sm:px-2.5 sm:py-1.5 text-xs text-[#77736C] hover:text-[#111111] hover:bg-[#F3F2EE] rounded-md transition-colors flex items-center gap-2 border border-transparent hover:border-[#E7E4DE] cursor-pointer"
               aria-label="Search markets and navigation"
             >
               <Search className="w-4 h-4" />
@@ -70,8 +70,8 @@ export const Navbar: React.FC = () => {
               </kbd>
             </button>
 
-            {/* Language Selector */}
-            <div className="relative">
+            {/* Language Selector (desktop & tablet) */}
+            <div className="relative hidden sm:block">
               <button
                 onClick={() => setIsLangDropdownOpen(prev => !prev)}
                 className="p-2 sm:px-2.5 sm:py-1.5 text-xs font-medium text-[#77736C] hover:text-[#111111] hover:bg-[#F3F2EE] rounded-md transition-colors flex items-center gap-1 cursor-pointer"
@@ -110,27 +110,28 @@ export const Navbar: React.FC = () => {
               isExternal
               variant="outline"
               size="sm"
-              className="hidden sm:inline-flex"
+              className="hidden md:inline-flex"
             >
               Sign In
             </Button>
 
-            {/* Open Account CTA (redirects to external CRM registration) */}
+            {/* Open Account CTA (Always visible, optimized for mobile) */}
             <Button
               href={BROKER_CONFIG.crmRegisterUrl}
               isExternal
               variant="primary"
               size="sm"
               icon={<ExternalLink className="w-3.5 h-3.5" />}
-              className="hidden md:inline-flex"
+              className="inline-flex text-xs px-2.5 py-1.5 sm:px-3 sm:py-2 min-h-[36px]"
             >
-              Open Account
+              <span className="hidden xs:inline">Open Account</span>
+              <span className="xs:hidden">Join</span>
             </Button>
 
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="lg:hidden p-2 text-[#111111] hover:bg-[#F3F2EE] rounded-md transition-colors cursor-pointer"
+              className="lg:hidden p-1.5 sm:p-2 text-[#111111] hover:bg-[#F3F2EE] rounded-md transition-colors cursor-pointer"
               aria-label="Open mobile navigation menu"
             >
               <Menu className="w-6 h-6" />

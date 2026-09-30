@@ -19,11 +19,17 @@
 }
 
 @layer base {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+
   body {
     font-family: var(--font-sans);
     background-color: #FBFBF9;
     color: #111111;
-    overflow-x: hidden;
   }
 
   h1, h2, .font-serif-display {

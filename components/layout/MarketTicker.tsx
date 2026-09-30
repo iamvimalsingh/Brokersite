@@ -42,11 +42,11 @@ export const MarketTicker: React.FC = () => {
 
   return (
     <div
-      className="w-full bg-[#F3F2EE] border-b border-[#E7E4DE] text-[11px] sm:text-xs text-[#111111] overflow-hidden select-none"
+      className="w-full max-w-full bg-[#F3F2EE] border-b border-[#E7E4DE] text-[11px] sm:text-xs text-[#111111] overflow-hidden select-none [contain:paint]"
       role="region"
       aria-label="Demo Market Quotes Ticker"
     >
-      <div className="relative flex items-center overflow-x-hidden max-w-full">
+      <div className="relative flex items-center overflow-hidden max-w-full">
         {/* Market snapshot indicator */}
         <div className="z-10 bg-[#F3F2EE] px-3 sm:px-4 py-1.5 border-r border-[#E7E4DE] shrink-0 flex items-center gap-1.5 shadow-xs">
           <span className="w-1.5 h-1.5 rounded-full bg-[#0A9F6E]" />

@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-[#FBFBF9] text-[#111111]">
+    <html lang="en" className="bg-[#FBFBF9] text-[#111111] overflow-x-hidden max-w-full">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -48,14 +48,14 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[#FBFBF9] text-[#111111] antialiased selection:bg-[#DDEDEA] selection:text-[#087F78] min-h-screen flex flex-col">
+      <body className="bg-[#FBFBF9] text-[#111111] antialiased selection:bg-[#DDEDEA] selection:text-[#087F78] min-h-screen flex flex-col overflow-x-hidden max-w-full w-full">
         {/* Global Navigation Header */}
         <Navbar />
         {/* Live-Feel Market Ticker (Demo Snapshot) */}
         <MarketTicker />
 
         {/* Dynamic Route Content */}
-        <main className="flex-1">
+        <main className="flex-1 w-full max-w-full overflow-x-hidden">
           {children}
         </main>
 
